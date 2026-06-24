@@ -152,17 +152,18 @@ npm run dev
 
 ## Screenshots
 
-### Home Page
+### 🏠 Home Page
+![Home Page](screenshots/home-page.png)
 
-home-page.png
+---
 
-### Outfit Recommendation
+### 🤖 Outfit Recommendation
+![Outfit Recommendation](screenshots/outfit-recommendation - Copy.png)
 
-outfit-recommendation - Copy.png
+---
 
-### Browse Items
-
-/browse-products.png
+### 🛍️ Browse Items
+![Browse Products](screenshots/browse-products.png)
 
 ---
 
