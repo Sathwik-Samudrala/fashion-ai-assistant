@@ -158,7 +158,7 @@ npm run dev
 ---
 
 ### 🤖 Outfit Recommendation
-![Outfit Recommendation](screenshots/outfit-recommendation - Copy.png)
+![Outfit Recommendation](screenshots/outfit-recommendation.png)
 
 ---
 
