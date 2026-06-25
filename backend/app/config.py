@@ -24,6 +24,12 @@ OUTFITS_PATH = os.path.join(DATA_DIR, "outfits.csv")
 
 # ── Gemini / LLM ──────────────────────────────────────────────────────────
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+
+print("========== GEMINI DEBUG ==========")
+print("GEMINI_API_KEY found:", bool(GEMINI_API_KEY))
+print("Length:", len(GEMINI_API_KEY))
+print("==================================")
+
 # gemini-2.5-flash is stable, free-tier eligible, and supported well past
 # this assignment's lifetime. Override via .env if you'd like to try a
 # newer model (e.g. gemini-3.5-flash).
@@ -33,7 +39,8 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
 _default_origins = (
     "http://localhost:5173,http://127.0.0.1:5173,"
     "http://localhost:5174,http://127.0.0.1:5174,"
-    "http://localhost:3000,http://127.0.0.1:3000"
+    "http://localhost:3000,http://127.0.0.1:3000,"
+    "https://fashion-ai-backend-1-rtvk.onrender.com"
 )
 CORS_ORIGINS = [
     o.strip() for o in os.getenv("CORS_ORIGINS", _default_origins).split(",") if o.strip()
