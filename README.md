@@ -1,186 +1,321 @@
-# Fashion AI Assistant 👗🤖
+# 👗 Fashion AI Assistant 🤖
 
-## Overview
+An AI-powered fashion recommendation platform that helps users discover personalized outfits based on gender, occasion, style preferences, and budget.
 
-Fashion AI Assistant is an AI-powered outfit recommendation system that helps users discover personalized fashion suggestions based on their preferences, occasion, gender, and budget.
-
-The application combines a curated fashion dataset with Google's Gemini AI to provide intelligent outfit recommendations and conversational fashion guidance.
+The project combines a curated fashion dataset, Google's Gemini AI, FastAPI, and React to deliver intelligent outfit recommendations and conversational fashion guidance.
 
 ---
 
-## Features
-
-* AI-powered fashion assistant using Gemini AI
-* Personalized outfit recommendations
-* Occasion-based outfit selection
-* Gender-specific recommendations
-* Budget-aware outfit matching
-* Product catalog browsing
-* Outfit explanation generation
-* Interactive chat interface
-* Product image support
-* REST API backend using FastAPI
-* Modern React frontend
-
----
-
-## Tech Stack
+## 🚀 Live Demo
 
 ### Frontend
+
+https://fashion-ai-frontend-osvx.onrender.com
+
+### Backend API
+
+https://fashion-ai-backend-jskx.onrender.com
+
+### API Documentation
+
+https://fashion-ai-backend-jskx.onrender.com/docs
+
+---
+
+# ✨ Features
+
+* AI-powered fashion assistant using Google Gemini AI
+* Personalized outfit recommendations
+* Occasion-based outfit matching
+* Gender-specific recommendations
+* Budget-aware fashion suggestions
+* Conversational fashion chatbot
+* Product catalog browsing
+* Outfit explanation generation using AI
+* Product image support
+* FastAPI REST API backend
+* Modern React frontend
+* Cloud deployment using Render
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
 
 * React.js
 * Vite
 * JavaScript
+* Axios
 * CSS
 
-### Backend
+## Backend
 
 * FastAPI
 * Python
 * Pandas
+* Uvicorn
+* Pydantic
 
-### AI Integration
+## AI Integration
 
 * Google Gemini API
 * google-genai SDK
 
-### Dataset
+## Deployment
 
-* Curated fashion products dataset
-* Curated outfit combinations dataset
+* Render (Frontend)
+* Render (Backend)
+* GitHub
 
 ---
 
-## Project Structure
+# 📂 Project Structure
 
-fashion-ai-assistant/
+```text
+fashion-ai-recommendation/
 
 ├── backend/
-
-│ ├── app/
-
-│ │ ├── routes/
-
-│ │ ├── services/
-
-│ │ ├── models/
-
-│ │ ├── data/
-
-│ │ └── main.py
-
-│ └── requirements.txt
-
+│   ├── app/
+│   │   ├── data/
+│   │   │   ├── images/
+│   │   │   ├── outfits.csv
+│   │   │   └── products.csv
+│   │   │
+│   │   ├── routes/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   ├── config.py
+│   │   └── main.py
+│   │
+│   ├── requirements.txt
+│   └── render.yaml
 │
-
 ├── frontend/
-
-│ ├── src/
-
-│ ├── public/
-
-│ └── package.json
-
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── services/
+│   │   ├── pages/
+│   │   └── App.jsx
+│   │
+│   ├── package.json
+│   └── vite.config.js
 │
-
-└── README.md
+├── screenshots/
+├── README.md
+└── .gitignore
+```
 
 ---
 
-## API Endpoints
+# 🔌 API Endpoints
 
-### Recommendation API
+## Health Check
 
-POST /api/recommend
-
-Generates outfit recommendations based on user preferences.
-
-### Chat API
-
-POST /api/chat
-
-Provides conversational fashion assistance.
-
-### Products API
-
-GET /api/products
-
-Returns product catalog information.
-
-### Outfit API
-
-GET /api/outfits/{outfit_id}
-
-Returns outfit details.
-
-### Health Check
-
+```http
 GET /api/health
+```
 
-Returns backend health status.
-
----
-
-## Dataset Statistics
-
-* Products Loaded: 68
-* Curated Outfits: 25
-* Multiple Fashion Categories
-* Multiple Fashion Brands
+Returns backend status and dataset information.
 
 ---
 
-## Installation
+## Outfit Recommendation
 
-### Backend
+```http
+POST /api/recommend
+```
 
-cd backend/app
+Generates personalized outfit recommendations.
 
-pip install -r ../requirements.txt
+Example Request:
 
-uvicorn app.main:app --reload --port 8000
+```json
+{
+  "message": "I need a casual outfit for college",
+  "gender": "men",
+  "occasion": "casual",
+  "style_preference": "minimalist",
+  "budget_inr": 3000
+}
+```
 
-### Frontend
+---
 
+## Fashion Chat Assistant
+
+```http
+POST /api/chat
+```
+
+Provides conversational fashion guidance.
+
+---
+
+## Product Catalog
+
+```http
+GET /api/products
+```
+
+Returns fashion products from the dataset.
+
+---
+
+## Outfit Details
+
+```http
+GET /api/outfits/{outfit_id}
+```
+
+Returns details for a specific outfit.
+
+---
+
+# 📊 Dataset Statistics
+
+| Metric             | Count    |
+| ------------------ | -------- |
+| Products Loaded    | 68       |
+| Curated Outfits    | 25       |
+| Fashion Categories | Multiple |
+| Fashion Brands     | Multiple |
+
+---
+
+# ⚙️ Local Installation
+
+## Backend Setup
+
+```bash
+cd backend
+
+pip install -r requirements.txt
+
+uvicorn app.main:app --reload
+```
+
+Backend runs at:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## Frontend Setup
+
+```bash
 cd frontend
 
 npm install
 
 npm run dev
+```
+
+Frontend runs at:
+
+```text
+http://localhost:5173
+```
 
 ---
 
-## Screenshots
+# 🔑 Environment Variables
 
-### 🏠 Home Page
+Create a `.env` file inside the backend directory.
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+GEMINI_MODEL=gemini-2.5-flash
+```
+
+---
+
+# 📸 Screenshots
+
+## 🏠 Home Page
+
+Add your homepage screenshot here.
+
+```markdown
 ![Home Page](screenshots/home-page.png)
+```
 
 ---
 
-### 🤖 Outfit Recommendation
-![Outfit Recommendation](screenshots/outfit-recommendation.png)
+## 🤖 Outfit Recommendation
+
+Add your recommendation screenshot here.
+
+```markdown
+![Outfit Recommendation](screenshots/recommendation.png)
+```
 
 ---
 
-### 🛍️ Browse Items
-![Browse Products](screenshots/browse-products.png)
+## 🛍️ Product Catalog
+
+Add your product catalog screenshot here.
+
+```markdown
+![Product Catalog](screenshots/products.png)
+```
 
 ---
 
-## Future Improvements
+## 💬 Fashion Chat Assistant
 
-* User authentication
-* Wishlist support
-* Fashion trend analysis
-* Image-based outfit search
-* Advanced recommendation engine
-* Deployment on cloud platforms
+Add your chatbot screenshot here.
+
+```markdown
+![Chat Assistant](screenshots/chat.png)
+```
 
 ---
 
-## Author
+# 🎯 Key Learning Outcomes
 
-Sathwik Samudrala
+* Full Stack Application Development
+* REST API Design with FastAPI
+* React Frontend Development
+* AI Integration using Gemini API
+* Data Processing with Pandas
+* Environment Variable Management
+* Git and GitHub Workflows
+* Cloud Deployment with Render
+* Frontend–Backend Integration
+
+---
+
+# 🔮 Future Enhancements
+
+* User Authentication
+* Wishlist and Favorites
+* Fashion Trend Analysis
+* Image-Based Outfit Search
+* Recommendation Personalization
+* User Profiles
+* Shopping Cart Integration
+* Multi-Language Support
+
+---
+
+# 👨‍💻 Author
+
+**Sathwik Samudrala**
 
 GitHub:
 https://github.com/Sathwik-Samudrala
+
+---
+
+# ⭐ Acknowledgements
+
+* Google Gemini AI
+* FastAPI
+* React
+* Render
+* Pandas
+* Open Source Community
