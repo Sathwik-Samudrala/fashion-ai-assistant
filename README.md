@@ -233,45 +233,16 @@ GEMINI_MODEL=gemini-2.5-flash
 
 ---
 
-# 📸 Screenshots
+## Screenshots
 
-## 🏠 Home Page
-
-Add your homepage screenshot here.
-
-```markdown
+### Home Page
 ![Home Page](screenshots/home-page.png)
-```
 
----
+### Outfit Recommendation
+![Outfit Recommendation](screenshots/outfit-recommendation.png)
 
-## 🤖 Outfit Recommendation
-
-Add your recommendation screenshot here.
-
-```markdown
-![Outfit Recommendation](screenshots/recommendation.png)
-```
-
----
-
-## 🛍️ Product Catalog
-
-Add your product catalog screenshot here.
-
-```markdown
-![Product Catalog](screenshots/products.png)
-```
-
----
-
-## 💬 Fashion Chat Assistant
-
-Add your chatbot screenshot here.
-
-```markdown
-![Chat Assistant](screenshots/chat.png)
-```
+### Browse Products
+![Browse Products](screenshots/browse-products.png)
 
 ---
 
